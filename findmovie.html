@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Movie | Home </title>
+    <title>Mr. Movie | Find Movie </title>
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
@@ -12,7 +12,7 @@
     <!-- Main content (until 1200px) -->
    
 
-        <header>
+        <header class = "find-movie__header">
 
             <div class="row ">
                 <nav >
@@ -30,29 +30,35 @@
 
             </div>
 
-           <section id="movie-content">
+            <section id = "find-movie-top">
 
-            <div class = "top">
-                <h1 class = "heading">The <span class = "orange-text">#1 Movie</span> Research Site </h1>
-                <h3 class = "subheading">Find the <span class = "orange-text">best</span> movie to watch!  </h3>
-            </div>
+                <div class = "find-movie-top-text">
+                    <h1 class = "movie-top-heading heading">Browse Our Movies</h1>
+                </div>
 
-            <div class="bottom">
+                <div class = "find-movie-bottom">
 
-                <form action="">
-                    <input class = "search-box" type="text" placeholder="Search Movie Here"> 
-                    <button class = "submit-button" type = "submit"><span class="material-symbols-outlined">
-                        search
-                        </span></button>
-                </form>
+                    <form  class = "search-form" action="">
+                        <div class = "search-form-div">
+                            <input class = "search-box search-movie" type="text" placeholder="Search Movie Here"> 
+                            <button  class = "search-button" type = "submit"><span class="material-symbols-outlined search-inline">
+                                search
+                                </span></button>
+                        </div>
+                       
+                    </form>
+                </div>
 
-            </div>
-
-           </section>
-          
-           
+            </section>
 
         </header>
+
+
+        <div class = "loading-track">
+            <div class = "current-loading">
+
+            </div>
+        </div>
         
 
     
