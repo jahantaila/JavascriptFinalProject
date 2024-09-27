@@ -328,3 +328,74 @@ header {
         width: 100%;
     }
 }
+
+
+/* BOTTOM SECTION */
+
+#find-movie-bottom {
+    /* height: calc(50vh); */
+    width: 100%;
+}
+
+.top-text { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    padding: 40px;
+}
+
+.search-result-text {
+    color: #0a1f44;
+    letter-spacing: 1.5px;
+    font-size: 32px;
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+}
+
+.slider-text {
+    color: #0a1f44;
+    letter-spacing: 1.5px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+#min-slider, #max-slider {
+    color: #E5A00D;
+    font-weight: bold;
+}
+
+.slider-helper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.slider-helper p {
+    color: #909399;
+}
+
+#yearRange {
+    
+    
+}
+
+/* MOVIE RESULST */
+
+.movie-results {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+.movie {
+    width: calc(100% / 3);
+}
