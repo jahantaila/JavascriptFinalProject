@@ -305,6 +305,7 @@ header {
 }
 
 .current-loading {
+    display: none;
     width: 0%;
     
     background-color: #de0a0a;
