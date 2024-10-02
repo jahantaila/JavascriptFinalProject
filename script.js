@@ -3,6 +3,7 @@ const searchBox = document.querySelector(".search-box")
 const noMovieResultText = document.querySelector(".no-movie-results")
 const movieResults = document.querySelector(".movie-results")
 const loadingTrack = document.querySelector(".current-loading")
+let originalMovieData = null // you can have this on top of you script.js file
 
 let movieData = null;
 
@@ -57,6 +58,7 @@ async function getMovies (title) {
 
     if (!data.Error) {
         movieData = data.Search.slice(0,6)
+        originalMovieData = [...movieData];
         // movieData = JSON.stringify(data.Search)
         
 
@@ -139,25 +141,15 @@ function renderMovies (data) {
 
 let origionalMovieData = movieData; 
 
-function filter (min, max) {
-
-    if (!!movieData) {
-
-
-        movieData = movieData.filter ( (movie) => {
-
-            return movie.Year > min && movie.Year < max ? movie : false;
-
-        })
-
-        console.log('filtered movie data!!!!')
-        console.log(movieData);
-        console.log(movieData.Title);
-
-        renderMovies(movieData)
-
+function filter(min, max) {
+    if (!!originalMovieData) {
+      movieData = originalMovieData.filter((movie) => {
+        return movie.Year >= min && movie.Year <= max;
+      });
+  
+      console.log("filtered movie data!!!!");
+      console.log(movieData);
+  
+      renderMovies(movieData);
     }
-
-
-
-}
+  }
