@@ -50,7 +50,7 @@ async function getMovies (title) {
     loadingTrack.style.display = "block"
     
 
-    const promise = await fetch(`http://www.omdbapi.com/?s=${title}&type=movie&apikey=90634f3b`)
+    const promise = await fetch(`https://www.omdbapi.com/?s=${title}&type=movie&apikey=90634f3b`)
     const data = await promise.json()
     
 
